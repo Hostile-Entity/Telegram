@@ -1114,6 +1114,8 @@
     <string name="GlobalAttachStickersRestricted">Stickers aren\'t allowed in this group.</string>
     <string name="GlobalAttachGifRestricted">GIFs aren\'t allowed in this group.</string>
     <string name="GlobalSendMessageRestricted">Writing messages isn\'t allowed in this group.</string>
+    <string name="ChannelForwardsRestricted">Forwards from this channel are restricted.</string>
+    <string name="ChatForwardsRestricted">Forwards from this group are restricted.</string>
     <string name="ChatAdmin">admin</string>
     <string name="ApkRestricted">APK installation is restricted for this app. You can enable this in system settings.</string>
     <string name="UnreadMessages">Unread Messages</string>
