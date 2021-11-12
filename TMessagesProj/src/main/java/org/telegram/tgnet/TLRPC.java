@@ -36875,6 +36875,7 @@ public class TLRPC {
 		public boolean verified;
 		public boolean restricted;
 		public boolean signatures;
+		public boolean noforwards;
 		public String username;
 		public boolean min;
         public boolean scam;
@@ -37075,6 +37076,8 @@ public class TLRPC {
             deactivated = (flags & 32) != 0;
             call_active = (flags & 8388608) != 0;
             call_not_empty = (flags & 16777216) != 0;
+            noforwards = (flags & 33554432) != 0;
+            Log.d("NoForwards Chat: ", Boolean.toString(noforwards));
             id = stream.readInt64(exception);
             title = stream.readString(exception);
             photo = ChatPhoto.TLdeserialize(stream, stream.readInt32(exception), exception);
@@ -37100,6 +37103,7 @@ public class TLRPC {
             flags = deactivated ? (flags | 32) : (flags &~ 32);
             flags = call_active ? (flags | 8388608) : (flags &~ 8388608);
             flags = call_not_empty ? (flags | 16777216) : (flags &~ 16777216);
+            flags = noforwards ? (flags | 33554432) : (flags &~ 33554432);
             stream.writeInt32(flags);
             stream.writeInt64(id);
             stream.writeString(title);
@@ -37131,6 +37135,8 @@ public class TLRPC {
             deactivated = (flags & 32) != 0;
             call_active = (flags & 8388608) != 0;
             call_not_empty = (flags & 16777216) != 0;
+            noforwards = (flags & 33554432) != 0;
+            Log.d("NoForwards Chat: ", Boolean.toString(noforwards));
             id = stream.readInt32(exception);
             title = stream.readString(exception);
             photo = ChatPhoto.TLdeserialize(stream, stream.readInt32(exception), exception);
@@ -37156,6 +37162,7 @@ public class TLRPC {
             flags = deactivated ? (flags | 32) : (flags &~ 32);
             flags = call_active ? (flags | 8388608) : (flags &~ 8388608);
             flags = call_not_empty ? (flags | 16777216) : (flags &~ 16777216);
+            flags = noforwards ? (flags | 33554432) : (flags &~ 33554432);
             stream.writeInt32(flags);
             stream.writeInt32((int) id);
             stream.writeString(title);
@@ -37352,6 +37359,8 @@ public class TLRPC {
             slowmode_enabled = (flags & 4194304) != 0;
             call_active = (flags & 8388608) != 0;
             call_not_empty = (flags & 16777216) != 0;
+            noforwards = (flags & 134217728) != 0;
+            Log.d("NoForwards: ", Boolean.toString(noforwards));
             fake = (flags & 33554432) != 0;
             gigagroup = (flags & 67108864) != 0;
             id = stream.readInt64(exception);
@@ -37411,6 +37420,7 @@ public class TLRPC {
             flags = slowmode_enabled ? (flags | 4194304) : (flags &~ 4194304);
             flags = call_active ? (flags | 8388608) : (flags &~ 8388608);
             flags = call_not_empty ? (flags | 16777216) : (flags &~ 16777216);
+            flags = noforwards ? (flags | 134217728) : (flags &~ 134217728);
             flags = fake ? (flags | 33554432) : (flags &~ 33554432);
             flags = gigagroup ? (flags | 67108864) : (flags &~ 67108864);
             stream.writeInt32(flags);
@@ -37632,6 +37642,8 @@ public class TLRPC {
             slowmode_enabled = (flags & 4194304) != 0;
             call_active = (flags & 8388608) != 0;
             call_not_empty = (flags & 16777216) != 0;
+            noforwards = (flags & 134217728) != 0;
+            Log.d("NoForwards: ", Boolean.toString(noforwards));
             fake = (flags & 33554432) != 0;
             gigagroup = (flags & 67108864) != 0;
             id = stream.readInt32(exception);
@@ -37692,6 +37704,7 @@ public class TLRPC {
             flags = slowmode_enabled ? (flags | 4194304) : (flags &~ 4194304);
             flags = call_active ? (flags | 8388608) : (flags &~ 8388608);
             flags = call_not_empty ? (flags | 16777216) : (flags &~ 16777216);
+            flags = noforwards ? (flags | 134217728) : (flags &~ 134217728);
             flags = fake ? (flags | 33554432) : (flags &~ 33554432);
             flags = gigagroup ? (flags | 67108864) : (flags &~ 67108864);
             stream.writeInt32(flags);
@@ -48281,6 +48294,27 @@ public class TLRPC {
 
         public void serializeToStream(AbstractSerializedData stream) {
             stream.writeInt32(constructor);
+        }
+    }
+
+    public static class TL_messages_toggleNoForwards extends TLObject {
+        public static int constructor = 0xb11eafa2;
+
+        public InputPeer peer;
+        public boolean enabled;
+
+        public void readParams(AbstractSerializedData stream, boolean exception) {
+            peer = InputPeer.TLdeserialize(stream, stream.readInt32(exception), exception);
+        }
+
+        public TLObject deserializeResponse(AbstractSerializedData stream, int constructor, boolean exception) {
+            return Updates.TLdeserialize(stream, constructor, exception);
+        }
+
+        public void serializeToStream(AbstractSerializedData stream) {
+            stream.writeInt32(constructor);
+            peer.serializeToStream(stream);
+            stream.writeBool(enabled);
         }
     }
 

@@ -139,7 +139,7 @@ public class ChatEditTypeActivity extends BaseFragment implements NotificationCe
         }
         isPrivate = !isForcePublic && TextUtils.isEmpty(currentChat.username);
         isChannel = ChatObject.isChannel(currentChat) && !currentChat.megagroup;
-        restrictContent = currentChat.restricted;
+        restrictContent = currentChat.noforwards;
         if (isForcePublic && TextUtils.isEmpty(currentChat.username) || isPrivate && currentChat.creator) {
             TLRPC.TL_channels_checkUsername req = new TLRPC.TL_channels_checkUsername();
             req.username = "1";
@@ -463,9 +463,9 @@ public class ChatEditTypeActivity extends BaseFragment implements NotificationCe
     }
 
     private void processDone() {
-        if (restrictContent != currentChat.restricted) {
-            currentChat.restricted = true;
-            getMessagesController().toogleChannelSignatures(chatId, restrictContent);
+        if (restrictContent != currentChat.noforwards) {
+            currentChat.noforwards = true;
+            getMessagesController().toogleChatForwards(chatId, restrictContent);
         }
         if (trySetUsername()) {
             finishFragment();
@@ -575,6 +575,8 @@ public class ChatEditTypeActivity extends BaseFragment implements NotificationCe
             typeInfoCell.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteRedText4));
             linkContainer.setVisibility(View.GONE);
             savingContainer.setVisibility(View.GONE);
+            restrictCell.setVisibility(View.GONE);
+            headerCell.setVisibility(View.GONE);
             typeInfoCell2.setVisibility(View.GONE);
             checkTextView.setVisibility(View.GONE);
             sectionCell2.setVisibility(View.GONE);
@@ -602,8 +604,8 @@ public class ChatEditTypeActivity extends BaseFragment implements NotificationCe
             typeInfoCell.setBackgroundDrawable(Theme.getThemedDrawable(typeInfoCell.getContext(), R.drawable.greydivider_bottom, Theme.key_windowBackgroundGrayShadow));
             adminnedChannelsLayout.setVisibility(View.GONE);
             linkContainer.setVisibility(View.VISIBLE);
-            savingContainer.setVisibility(View.VISIBLE);
-            typeInfoCell2.setVisibility(View.VISIBLE);
+            savingContainer.setVisibility(isPrivate ? View.VISIBLE : View.GONE);
+            typeInfoCell2.setVisibility(isPrivate ? View.VISIBLE : View.GONE);
             loadingAdminedCell.setVisibility(View.GONE);
             if (isChannel) {
                 typeInfoCell.setText(isPrivate ? LocaleController.getString("ChannelPrivateLinkHelp", R.string.ChannelPrivateLinkHelp) : LocaleController.getString("ChannelUsernameHelp", R.string.ChannelUsernameHelp));
