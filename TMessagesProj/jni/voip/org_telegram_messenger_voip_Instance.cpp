@@ -363,11 +363,11 @@ void initWebRTC(JNIEnv *env) {
     rtc::InitializeSSL();
     webrtcLoaded = true;
 
-    NativeInstanceClass = static_cast<jclass>(env->NewGlobalRef(env->FindClass("org/telegram/messenger/voip/NativeInstance")));
-    TrafficStatsClass = static_cast<jclass>(env->NewGlobalRef(env->FindClass("org/telegram/messenger/voip/Instance$TrafficStats")));
-    FingerprintClass = static_cast<jclass>(env->NewGlobalRef(env->FindClass("org/telegram/messenger/voip/Instance$Fingerprint")));
-    FinalStateClass = static_cast<jclass>(env->NewGlobalRef(env->FindClass("org/telegram/messenger/voip/Instance$FinalState")));
-    FinalStateInitMethod = env->GetMethodID(FinalStateClass, "<init>", "([BLjava/lang/String;Lorg/telegram/messenger/voip/Instance$TrafficStats;Z)V");
+    NativeInstanceClass = static_cast<jclass>(env->NewGlobalRef(env->FindClass("org/telegram_ig21/messenger/voip/NativeInstance")));
+    TrafficStatsClass = static_cast<jclass>(env->NewGlobalRef(env->FindClass("org/telegram_ig21/messenger/voip/Instance$TrafficStats")));
+    FingerprintClass = static_cast<jclass>(env->NewGlobalRef(env->FindClass("org/telegram_ig21/messenger/voip/Instance$Fingerprint")));
+    FinalStateClass = static_cast<jclass>(env->NewGlobalRef(env->FindClass("org/telegram_ig21/messenger/voip/Instance$FinalState")));
+    FinalStateInitMethod = env->GetMethodID(FinalStateClass, "<init>", "([BLjava/lang/String;Lorg/telegram_ig21/messenger/voip/Instance$TrafficStats;Z)V");
 }
 
 JNIEXPORT jlong JNICALL Java_org_telegram_messenger_voip_NativeInstance_makeGroupNativeInstance(JNIEnv *env, jclass clazz, jobject instanceObj, jstring logFilePath, jboolean highQuality, jlong videoCapturer, jboolean screencast, jboolean noiseSupression) {
@@ -834,7 +834,7 @@ JNIEXPORT void JNICALL Java_org_telegram_messenger_voip_NativeInstance_stopNativ
         jobject globalRef = ((AndroidContext *) instance->_platformContext.get())->getJavaInstance();
         const std::string &path = tgvoip::jni::JavaStringToStdString(env, JavaObject(env, globalRef).getStringField("persistentStateFilePath"));
         savePersistentState(path.c_str(), finalState.persistentState);
-        env->CallVoidMethod(globalRef, env->GetMethodID(NativeInstanceClass, "onStop", "(Lorg/telegram/messenger/voip/Instance$FinalState;)V"), asJavaFinalState(env, finalState));
+        env->CallVoidMethod(globalRef, env->GetMethodID(NativeInstanceClass, "onStop", "(Lorg/telegram_ig21/messenger/voip/Instance$FinalState;)V"), asJavaFinalState(env, finalState));
         delete instance;
     });
 }

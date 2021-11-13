@@ -6,7 +6,7 @@
 
 void throw_sqlite3_exception(JNIEnv *env, sqlite3 *handle, int errcode) {
     const char *errmsg = sqlite3_errmsg(handle);
-    jclass exClass = env->FindClass("org/telegram/SQLite/SQLiteException");
+    jclass exClass = env->FindClass("org/telegram_ig21/SQLite/SQLiteException");
     env->ThrowNew(exClass, errmsg);
 }
 

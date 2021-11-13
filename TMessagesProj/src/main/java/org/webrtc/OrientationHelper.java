@@ -2,7 +2,7 @@ package org.webrtc;
 
 import android.view.OrientationEventListener;
 
-import org.telegram.messenger.ApplicationLoader;
+import org.telegram_ig21.messenger.ApplicationLoader;
 
 public class OrientationHelper {
 
