@@ -1,7 +1,6 @@
 package org.telegram.ui.Components;
 
-import static org.telegram.messenger.MediaDataController.MEDIA_PHOTOVIDEO;
-import static org.telegram.messenger.MediaDataController.getMediaType;
+import static org.telegram.messenger21he.MediaDataController.MEDIA_PHOTOVIDEO;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -56,26 +55,24 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.exoplayer2.util.Log;
-
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MediaDataController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.browser.Browser;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ApplicationLoader;
+import org.telegram.messenger21he.ChatObject;
+import org.telegram.messenger21he.DialogObject;
+import org.telegram.messenger21he.FileLoader;
+import org.telegram.messenger21he.FileLog;
+import org.telegram.messenger21he.ImageReceiver;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.MediaController;
+import org.telegram.messenger21he.MediaDataController;
+import org.telegram.messenger21he.MessageObject;
+import org.telegram.messenger21he.MessagesController;
+import org.telegram.messenger21he.NotificationCenter;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.SharedConfig;
+import org.telegram.messenger21he.UserObject;
+import org.telegram.messenger21he.Utilities;
+import org.telegram.messenger21he.browser.Browser;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;

@@ -17,7 +17,7 @@ import android.text.TextPaint;
 import android.view.MotionEvent;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.telegram.messenger21he.AndroidUtilities;
 
 import java.util.Locale;
 

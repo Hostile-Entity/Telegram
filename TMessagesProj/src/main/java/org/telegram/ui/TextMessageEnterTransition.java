@@ -27,12 +27,12 @@ import android.view.animation.LinearInterpolator;
 import androidx.core.graphics.ColorUtils;
 import androidx.recyclerview.widget.ChatListItemAnimator;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.UserConfig;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.Emoji;
+import org.telegram.messenger21he.MessageObject;
+import org.telegram.messenger21he.NotificationCenter;
+import org.telegram.messenger21he.SharedConfig;
+import org.telegram.messenger21he.UserConfig;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.SimpleTextView;
 import org.telegram.ui.ActionBar.Theme;

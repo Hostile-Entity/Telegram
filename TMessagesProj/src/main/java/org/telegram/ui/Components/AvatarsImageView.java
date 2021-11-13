@@ -15,14 +15,14 @@ import android.widget.FrameLayout;
 
 import androidx.core.graphics.ColorUtils;
 
-import org.telegram.messenger.AccountInstance;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.voip.VoIPService;
+import org.telegram.messenger21he.AccountInstance;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.DialogObject;
+import org.telegram.messenger21he.ImageReceiver;
+import org.telegram.messenger21he.MessageObject;
+import org.telegram.messenger21he.MessagesController;
+import org.telegram.messenger21he.UserConfig;
+import org.telegram.messenger21he.voip.VoIPService;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;

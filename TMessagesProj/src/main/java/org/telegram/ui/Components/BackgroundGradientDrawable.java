@@ -12,9 +12,9 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.collection.ArrayMap;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.Utilities;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ApplicationLoader;
+import org.telegram.messenger21he.Utilities;
 
 import java.util.ArrayList;
 import java.util.List;

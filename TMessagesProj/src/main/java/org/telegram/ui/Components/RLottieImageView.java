@@ -3,7 +3,7 @@ package org.telegram.ui.Components;
 import android.content.Context;
 import android.widget.ImageView;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.telegram.messenger21he.AndroidUtilities;
 
 import java.util.HashMap;
 

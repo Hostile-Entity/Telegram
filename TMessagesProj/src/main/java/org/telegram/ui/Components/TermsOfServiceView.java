@@ -14,12 +14,12 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.FileLog;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.MessageObject;
+import org.telegram.messenger21he.MessagesController;
+import org.telegram.messenger21he.R;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.AlertDialog;

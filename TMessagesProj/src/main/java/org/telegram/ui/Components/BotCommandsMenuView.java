@@ -21,9 +21,9 @@ import androidx.annotation.NonNull;
 import androidx.collection.LongSparseArray;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.R;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.R;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.MenuDrawable;
 import org.telegram.ui.ActionBar.Theme;

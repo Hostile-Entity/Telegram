@@ -58,12 +58,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ApplicationLoader;
+import org.telegram.messenger21he.FileLog;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.Utilities;
 import org.telegram.ui.ActionBar.ActionBar;
 import org.telegram.ui.ActionBar.ActionBarLayout;
 import org.telegram.ui.ActionBar.BaseFragment;

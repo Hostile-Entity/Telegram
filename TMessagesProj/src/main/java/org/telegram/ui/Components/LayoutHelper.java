@@ -17,8 +17,8 @@ import android.widget.ScrollView;
 
 import androidx.core.view.ViewCompat;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LocaleController;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.LocaleController;
 
 @SuppressWarnings({"WeakerAccess"})
 public class LayoutHelper {

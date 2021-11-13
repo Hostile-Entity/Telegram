@@ -9,11 +9,11 @@ import android.widget.TextView;
 import androidx.core.graphics.ColorUtils;
 import androidx.core.widget.NestedScrollView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.MessagesController;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.UserConfig;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.AlertDialog;

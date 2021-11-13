@@ -17,9 +17,9 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.SecureDocument;
+import org.telegram.messenger21he.ImageLocation;
+import org.telegram.messenger21he.ImageReceiver;
+import org.telegram.messenger21he.SecureDocument;
 import org.telegram.tgnet.TLObject;
 
 public class BackupImageView extends View {

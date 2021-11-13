@@ -26,12 +26,12 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserObject;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.FileLog;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.NotificationCenter;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.UserObject;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 

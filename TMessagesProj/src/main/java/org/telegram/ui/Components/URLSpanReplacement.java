@@ -13,7 +13,7 @@ import android.text.TextPaint;
 import android.text.style.URLSpan;
 import android.view.View;
 
-import org.telegram.messenger.browser.Browser;
+import org.telegram.messenger21he.browser.Browser;
 
 public class URLSpanReplacement extends URLSpan {
 

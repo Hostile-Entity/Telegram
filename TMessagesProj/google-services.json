@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:978215117002:android:53e82b5df55fc392109433",
+        "mobilesdk_app_id": "1:978215117002:android:3a5456b45d11febc109433",
         "android_client_info": {
-          "package_name": "org.telegram.messenger"
+          "package_name": "org.telegram.messenger21he"
         }
       },
       "oauth_client": [
@@ -36,9 +36,9 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:978215117002:android:e352e28ea4649deb109433",
+        "mobilesdk_app_id": "1:978215117002:android:e00adc226e316382109433",
         "android_client_info": {
-          "package_name": "org.telegram.messenger.beta"
+          "package_name": "org.telegram.messenger21he.beta"
         }
       },
       "oauth_client": [

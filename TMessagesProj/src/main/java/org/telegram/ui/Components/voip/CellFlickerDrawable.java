@@ -10,7 +10,7 @@ import android.graphics.Shader;
 
 import androidx.core.graphics.ColorUtils;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.telegram.messenger21he.AndroidUtilities;
 
 public class CellFlickerDrawable {
 

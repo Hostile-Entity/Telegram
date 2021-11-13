@@ -25,16 +25,16 @@ import android.widget.ImageView;
 
 import androidx.core.graphics.ColorUtils;
 
-import org.telegram.messenger.AccountInstance;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.voip.VoIPService;
+import org.telegram.messenger21he.AccountInstance;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ChatObject;
+import org.telegram.messenger21he.ImageLocation;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.MessageObject;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.UserObject;
+import org.telegram.messenger21he.Utilities;
+import org.telegram.messenger21he.voip.VoIPService;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.SimpleTextView;
 import org.telegram.ui.ActionBar.Theme;

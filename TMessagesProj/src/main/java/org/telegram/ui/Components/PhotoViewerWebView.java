@@ -19,14 +19,14 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BringAppForegroundService;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.browser.Browser;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ApplicationLoader;
+import org.telegram.messenger21he.BringAppForegroundService;
+import org.telegram.messenger21he.FileLog;
+import org.telegram.messenger21he.MessagesController;
+import org.telegram.messenger21he.UserConfig;
+import org.telegram.messenger21he.Utilities;
+import org.telegram.messenger21he.browser.Browser;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.PhotoViewer;
 
@@ -318,7 +318,7 @@ public class PhotoViewerWebView extends FrameLayout {
                 webView.loadDataWithBaseURL("https://messenger.telegram.org/", String.format(Locale.US, youtubeFrame, currentYoutubeId, seekToTime), "text/html", "UTF-8", "https://youtube.com");
             } else {
                 HashMap<String, String> args = new HashMap<>();
-                args.put("Referer", "messenger.telegram.org");
+                args.put("Referer", "messenger21he.telegram.org");
                 webView.loadUrl(webPage.embed_url, args);
             }
         } catch (Exception e) {

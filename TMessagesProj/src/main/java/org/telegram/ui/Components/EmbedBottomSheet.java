@@ -48,16 +48,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BringAppForegroundService;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.browser.Browser;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ApplicationLoader;
+import org.telegram.messenger21he.BringAppForegroundService;
+import org.telegram.messenger21he.FileLog;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.MessageObject;
+import org.telegram.messenger21he.MessagesController;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.Utilities;
+import org.telegram.messenger21he.browser.Browser;
 import org.telegram.ui.ActionBar.BottomSheet;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.LaunchActivity;
@@ -414,7 +414,7 @@ public class EmbedBottomSheet extends BottomSheet {
                 }
                 videoView.loadVideo(null, null, null, null, false);
                 HashMap<String, String> args = new HashMap<>();
-                args.put("Referer", "messenger.telegram.org");
+                args.put("Referer", "messenger21he.telegram.org");
                 try {
                     webView.loadUrl(embedUrl, args);
                 } catch (Exception e) {
@@ -864,7 +864,7 @@ public class EmbedBottomSheet extends BottomSheet {
                     }
                     videoView.loadVideo(null, null, null, null, false);
                     HashMap<String, String> args = new HashMap<>();
-                    args.put("Referer", "messenger.telegram.org");
+                    args.put("Referer", "messenger21he.telegram.org");
                     try {
                         String currentYoutubeId = videoView.getYoutubeId();
                         if (currentYoutubeId != null) {

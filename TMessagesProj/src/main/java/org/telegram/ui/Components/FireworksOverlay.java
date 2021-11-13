@@ -11,12 +11,12 @@ import android.os.Build;
 import android.os.SystemClock;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.Utilities;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ApplicationLoader;
+import org.telegram.messenger21he.BuildVars;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.SharedConfig;
+import org.telegram.messenger21he.Utilities;
 
 import java.util.ArrayList;
 import java.util.Calendar;

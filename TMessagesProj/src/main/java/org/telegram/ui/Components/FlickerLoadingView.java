@@ -10,9 +10,9 @@ import android.graphics.Shader;
 import android.os.SystemClock;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.SharedConfig;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.SharedConfig;
 import org.telegram.ui.ActionBar.Theme;
 
 import java.util.Random;

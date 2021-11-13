@@ -21,17 +21,16 @@ import android.widget.FrameLayout;
 
 import com.google.android.gms.maps.model.LatLng;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.LocationController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ContactsController;
+import org.telegram.messenger21he.DialogObject;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.LocationController;
+import org.telegram.messenger21he.MessageObject;
+import org.telegram.messenger21he.MessagesController;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.UserConfig;
+import org.telegram.messenger21he.UserObject;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.SimpleTextView;

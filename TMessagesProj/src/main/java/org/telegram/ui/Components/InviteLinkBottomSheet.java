@@ -26,13 +26,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.MessagesStorage;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.Emoji;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.MessagesController;
+import org.telegram.messenger21he.MessagesStorage;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.UserConfig;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
@@ -48,7 +48,6 @@ import org.telegram.ui.ManageLinksActivity;
 import org.telegram.ui.ProfileActivity;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;

@@ -26,9 +26,9 @@ import android.view.View;
 import android.view.animation.OvershootInterpolator;
 import android.widget.FrameLayout;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.MediaController;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ImageReceiver;
+import org.telegram.messenger21he.MediaController;
 import org.telegram.ui.ActionBar.Theme;
 import org.telegram.ui.BubbleActivity;
 import org.telegram.ui.Components.Crop.CropRotationWheel;

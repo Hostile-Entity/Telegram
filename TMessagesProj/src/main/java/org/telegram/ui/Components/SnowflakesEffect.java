@@ -13,8 +13,8 @@ import android.graphics.Paint;
 import android.os.Build;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.Utilities;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.Utilities;
 import org.telegram.ui.ActionBar.Theme;
 
 import java.util.ArrayList;

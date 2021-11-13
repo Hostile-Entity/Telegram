@@ -22,9 +22,9 @@ import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityManager;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.FileLog;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.BuildVars;
+import org.telegram.messenger21he.FileLog;
 
 import java.util.ArrayList;
 

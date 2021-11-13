@@ -3,7 +3,7 @@ package org.telegram.ui.Components;
 import android.view.MotionEvent;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
+import org.telegram.messenger21he.AndroidUtilities;
 
 import androidx.recyclerview.widget.RecyclerView;
 

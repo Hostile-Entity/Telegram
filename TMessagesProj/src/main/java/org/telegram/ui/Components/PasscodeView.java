@@ -52,14 +52,14 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.support.fingerprint.FingerprintManagerCompat;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.NotificationCenter;
+import org.telegram.messenger21he.ApplicationLoader;
+import org.telegram.messenger21he.FileLog;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.SharedConfig;
+import org.telegram.messenger21he.support.fingerprint.FingerprintManagerCompat;
 import org.telegram.ui.ActionBar.AlertDialog;
 import org.telegram.ui.ActionBar.Theme;
 

@@ -22,12 +22,12 @@ import android.text.TextUtils;
 import android.view.HapticFeedbackConstants;
 import android.view.View;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.DispatchQueuePool;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ApplicationLoader;
+import org.telegram.messenger21he.DispatchQueuePool;
+import org.telegram.messenger21he.FileLog;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.Utilities;
 
 import java.io.File;
 import java.io.FileInputStream;

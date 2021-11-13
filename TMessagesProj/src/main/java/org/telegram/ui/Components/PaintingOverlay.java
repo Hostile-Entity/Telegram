@@ -16,11 +16,11 @@ import android.view.MotionEvent;
 import android.view.inputmethod.EditorInfo;
 import android.widget.FrameLayout;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
-import org.telegram.messenger.VideoEditedInfo;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.FileLoader;
+import org.telegram.messenger21he.ImageLocation;
+import org.telegram.messenger21he.ImageReceiver;
+import org.telegram.messenger21he.VideoEditedInfo;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.Components.Paint.Views.EditTextOutline;
 

@@ -37,17 +37,17 @@ import android.widget.TextView;
 
 import androidx.annotation.Keep;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.Emoji;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.R;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ChatObject;
+import org.telegram.messenger21he.ContactsController;
+import org.telegram.messenger21he.DialogObject;
+import org.telegram.messenger21he.Emoji;
+import org.telegram.messenger21he.FileLog;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.MessagesController;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.UserConfig;
+import org.telegram.messenger21he.UserObject;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;

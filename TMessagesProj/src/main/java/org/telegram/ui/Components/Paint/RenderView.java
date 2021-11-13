@@ -15,10 +15,10 @@ import javax.microedition.khronos.egl.EGLContext;
 import javax.microedition.khronos.egl.EGLDisplay;
 import javax.microedition.khronos.egl.EGLSurface;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.DispatchQueue;
-import org.telegram.messenger.FileLog;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.BuildVars;
+import org.telegram.messenger21he.DispatchQueue;
+import org.telegram.messenger21he.FileLog;
 import org.telegram.ui.Components.Size;
 
 import java.util.concurrent.CountDownLatch;

@@ -10,12 +10,10 @@ import android.graphics.Shader;
 import android.os.SystemClock;
 import android.view.View;
 
-import com.google.android.exoplayer2.util.Log;
-
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.voip.VoIPService;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ChatObject;
+import org.telegram.messenger21he.Utilities;
+import org.telegram.messenger21he.voip.VoIPService;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 

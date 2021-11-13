@@ -16,11 +16,9 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.view.View;
 
-import com.google.android.exoplayer2.util.Log;
-
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.ImageReceiver;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ImageLocation;
+import org.telegram.messenger21he.ImageReceiver;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;
 

@@ -40,11 +40,11 @@ import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.R;
-import org.telegram.messenger.Utilities;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.BuildVars;
+import org.telegram.messenger21he.FileLog;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.Utilities;
 
 public class DrawerLayoutContainer extends FrameLayout {
 

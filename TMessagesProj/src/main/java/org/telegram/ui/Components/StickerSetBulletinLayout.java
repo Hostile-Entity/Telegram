@@ -6,12 +6,12 @@ import android.content.Context;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.ImageLocation;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.R;
+import org.telegram.messenger21he.BuildVars;
+import org.telegram.messenger21he.FileLoader;
+import org.telegram.messenger21he.ImageLocation;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.MessageObject;
+import org.telegram.messenger21he.R;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
 import org.telegram.ui.ActionBar.Theme;

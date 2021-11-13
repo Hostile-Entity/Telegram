@@ -73,36 +73,36 @@ import com.google.firebase.appindexing.FirebaseUserActions;
 import com.google.firebase.appindexing.builders.AssistActionBuilder;
 
 import org.telegram.PhoneFormat.PhoneFormat;
-import org.telegram.messenger.AccountInstance;
-import org.telegram.messenger.AndroidUtilities;
-import org.telegram.messenger.ApplicationLoader;
-import org.telegram.messenger.BuildVars;
-import org.telegram.messenger.ChatObject;
-import org.telegram.messenger.ContactsController;
-import org.telegram.messenger.ContactsLoadingObserver;
-import org.telegram.messenger.DialogObject;
-import org.telegram.messenger.FileLoader;
-import org.telegram.messenger.FileLog;
-import org.telegram.messenger.ImageLoader;
-import org.telegram.messenger.LocaleController;
-import org.telegram.messenger.LocationController;
-import org.telegram.messenger.MediaController;
-import org.telegram.messenger.MediaDataController;
-import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
-import org.telegram.messenger.MessagesStorage;
-import org.telegram.messenger.NotificationCenter;
-import org.telegram.messenger.R;
-import org.telegram.messenger.SendMessagesHelper;
-import org.telegram.messenger.SharedConfig;
-import org.telegram.messenger.UserConfig;
-import org.telegram.messenger.UserObject;
-import org.telegram.messenger.Utilities;
-import org.telegram.messenger.browser.Browser;
-import org.telegram.messenger.camera.CameraController;
-import org.telegram.messenger.voip.VideoCapturerDevice;
-import org.telegram.messenger.voip.VoIPPendingCall;
-import org.telegram.messenger.voip.VoIPService;
+import org.telegram.messenger21he.AccountInstance;
+import org.telegram.messenger21he.AndroidUtilities;
+import org.telegram.messenger21he.ApplicationLoader;
+import org.telegram.messenger21he.BuildVars;
+import org.telegram.messenger21he.ChatObject;
+import org.telegram.messenger21he.ContactsController;
+import org.telegram.messenger21he.ContactsLoadingObserver;
+import org.telegram.messenger21he.DialogObject;
+import org.telegram.messenger21he.FileLoader;
+import org.telegram.messenger21he.FileLog;
+import org.telegram.messenger21he.ImageLoader;
+import org.telegram.messenger21he.LocaleController;
+import org.telegram.messenger21he.LocationController;
+import org.telegram.messenger21he.MediaController;
+import org.telegram.messenger21he.MediaDataController;
+import org.telegram.messenger21he.MessageObject;
+import org.telegram.messenger21he.MessagesController;
+import org.telegram.messenger21he.MessagesStorage;
+import org.telegram.messenger21he.NotificationCenter;
+import org.telegram.messenger21he.R;
+import org.telegram.messenger21he.SendMessagesHelper;
+import org.telegram.messenger21he.SharedConfig;
+import org.telegram.messenger21he.UserConfig;
+import org.telegram.messenger21he.UserObject;
+import org.telegram.messenger21he.Utilities;
+import org.telegram.messenger21he.browser.Browser;
+import org.telegram.messenger21he.camera.CameraController;
+import org.telegram.messenger21he.voip.VideoCapturerDevice;
+import org.telegram.messenger21he.voip.VoIPPendingCall;
+import org.telegram.messenger21he.voip.VoIPService;
 import org.telegram.tgnet.ConnectionsManager;
 import org.telegram.tgnet.TLObject;
 import org.telegram.tgnet.TLRPC;
@@ -1430,7 +1430,7 @@ public class LaunchActivity extends Activity implements ActionBarLayout.ActionBa
                     if (error) {
                         Toast.makeText(this, "Unsupported content", Toast.LENGTH_SHORT).show();
                     }
-                } else if ("org.telegram.messenger.CREATE_STICKER_PACK".equals(intent.getAction())) {
+                } else if ("org.telegram.messenger21he.CREATE_STICKER_PACK".equals(intent.getAction())) {
                     try {
                         importingStickers = intent.getParcelableArrayListExtra(Intent.EXTRA_STREAM);
                         importingStickersEmoji = intent.getStringArrayListExtra("STICKER_EMOJIS");
@@ -2094,9 +2094,9 @@ public class LaunchActivity extends Activity implements ActionBarLayout.ActionBa
                                             NotificationCenter.getInstance(intentAccount[0]).postNotificationName(NotificationCenter.closeChats);
                                             push_user_id = userId;
                                             String mimeType = cursor.getString(cursor.getColumnIndex(ContactsContract.Data.MIMETYPE));
-                                            if (TextUtils.equals(mimeType, "vnd.android.cursor.item/vnd.org.telegram.messenger.android.call")) {
+                                            if (TextUtils.equals(mimeType, "vnd.android.cursor.item/vnd.org.telegram.messenger21he.android.call")) {
                                                 audioCallUser = true;
-                                            } else if (TextUtils.equals(mimeType, "vnd.android.cursor.item/vnd.org.telegram.messenger.android.call.video")) {
+                                            } else if (TextUtils.equals(mimeType, "vnd.android.cursor.item/vnd.org.telegram.messenger21he.android.call.video")) {
                                                 videoCallUser = true;
                                             }
                                         }
@@ -2107,7 +2107,7 @@ public class LaunchActivity extends Activity implements ActionBarLayout.ActionBa
                             }
                         }
                     }
-                } else if (intent.getAction().equals("org.telegram.messenger.OPEN_ACCOUNT")) {
+                } else if (intent.getAction().equals("org.telegram.messenger21he.OPEN_ACCOUNT")) {
                     open_settings = 1;
                 } else if (intent.getAction().equals("new_dialog")) {
                     open_new_dialog = 1;
