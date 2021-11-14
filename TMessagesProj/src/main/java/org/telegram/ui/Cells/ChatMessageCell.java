@@ -50,6 +50,7 @@ import android.text.TextUtils;
 import android.text.style.CharacterStyle;
 import android.text.style.ClickableSpan;
 import android.text.style.URLSpan;
+import android.util.Log;
 import android.util.Property;
 import android.util.SparseArray;
 import android.util.StateSet;
@@ -613,6 +614,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
     private boolean wasPinned;
     public long linkedChatId;
     public boolean isRepliesChat;
+    public boolean isNoForwards;
     public boolean isPinnedChat;
     private boolean isPressed;
     private boolean forwardName;
@@ -3167,7 +3169,8 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
             drawVideoSize = false;
             canStreamVideo = false;
             animatingNoSound = 0;
-            drawSideButton = !isRepliesChat && checkNeedDrawShareButton(messageObject) && (currentPosition == null || currentPosition.last) ? 1 : 0;
+            Log.d("Chat", "Update noForward inside");
+            drawSideButton = !isRepliesChat && !isNoForwards && checkNeedDrawShareButton(messageObject) && (currentPosition == null || currentPosition.last) ? 1 : 0;
             if (isPinnedChat || drawSideButton == 1 && messageObject.messageOwner.fwd_from != null && !messageObject.isOutOwner() && messageObject.messageOwner.fwd_from.saved_from_peer != null && messageObject.getDialogId() == UserConfig.getInstance(currentAccount).getClientUserId()) {
                 drawSideButton = 2;
             }
@@ -6738,7 +6741,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
     }
 
     public void setMessageObject(MessageObject messageObject, MessageObject.GroupedMessages groupedMessages, boolean bottomNear, boolean topNear) {
-        if (attachedToWindow) {
+        if (attachedToWindow && !messageObject.forceUpdate) {
             setMessageContent(messageObject, groupedMessages, bottomNear, topNear);
         } else {
             messageObjectToSet = messageObject;
