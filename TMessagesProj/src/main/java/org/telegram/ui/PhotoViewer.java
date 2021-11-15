@@ -9669,7 +9669,6 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
         }
         setDoubleTapEnabled(true);
         allowShare = false;
-        noForwards = parentChatActivity != null && parentChatActivity.isNoForwardsChat();
         slideshowMessageId = 0;
         nameOverride = null;
         dateOverride = 0;
@@ -12015,6 +12014,9 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
             }
         }
 
+        final TLRPC.Chat currentChat = messageObject == null ? null : MessagesController.getInstance(UserConfig.selectedAccount).getChat(messageObject.getChatId());
+        noForwards = currentChat != null && currentChat.noforwards;
+
         try {
             windowLayoutParams.type = WindowManager.LayoutParams.LAST_APPLICATION_WINDOW;
             if (Build.VERSION.SDK_INT >= 21) {
@@ -12025,7 +12027,7 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
             } else {
                 windowLayoutParams.flags = WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM;
             }
-            if (chatActivity != null && chatActivity.getCurrentEncryptedChat() != null) {
+            if (chatActivity != null && chatActivity.getCurrentEncryptedChat() != null || noForwards) {
                 windowLayoutParams.flags |= WindowManager.LayoutParams.FLAG_SECURE;
             } else {
                 windowLayoutParams.flags &=~ WindowManager.LayoutParams.FLAG_SECURE;

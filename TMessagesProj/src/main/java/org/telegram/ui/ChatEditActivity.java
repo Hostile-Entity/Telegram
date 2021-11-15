@@ -130,6 +130,7 @@ public class ChatEditActivity extends BaseFragment implements ImageUpdater.Image
     private boolean signMessages;
 
     private boolean isChannel;
+    private boolean isNoForwards;
 
     private boolean historyHidden;
 
@@ -1004,7 +1005,7 @@ public class ChatEditActivity extends BaseFragment implements ImageUpdater.Image
                 boolean infoWasEmpty = info == null;
                 info = chatFull;
                 historyHidden = !ChatObject.isChannel(currentChat) || info.hidden_prehistory;
-                updateFields(false);
+                updateFields(true);
                 if (infoWasEmpty) {
                     loadLinksCount();
                 }
@@ -1271,6 +1272,7 @@ public class ChatEditActivity extends BaseFragment implements ImageUpdater.Image
             }
         }
         boolean isPrivate = TextUtils.isEmpty(currentChat.username);
+        boolean isNoForwards = currentChat.noforwards;
 
         if (historyCell != null) {
             if (info != null && info.location instanceof TLRPC.TL_channelLocation) {
@@ -1344,9 +1346,9 @@ public class ChatEditActivity extends BaseFragment implements ImageUpdater.Image
             } else {
                 String type;
                 if (isChannel) {
-                    type = isPrivate ? LocaleController.getString("TypePrivate", R.string.TypePrivate) : LocaleController.getString("TypePublic", R.string.TypePublic);
+                    type = isPrivate ? isNoForwards ? LocaleController.getString("TypePrivateRestricted", R.string.TypePrivateRestricted) : LocaleController.getString("TypePrivate", R.string.TypePrivate) : LocaleController.getString("TypePublic", R.string.TypePublic);
                 } else {
-                    type = isPrivate ? LocaleController.getString("TypePrivateGroup", R.string.TypePrivateGroup) : LocaleController.getString("TypePublicGroup", R.string.TypePublicGroup);
+                    type = isPrivate ? isNoForwards ? LocaleController.getString("TypePrivateGroupRestricted", R.string.TypePrivateGroup) : LocaleController.getString("TypePrivateGroup", R.string.TypePrivateGroup) : LocaleController.getString("TypePublicGroup", R.string.TypePublicGroup);
                 }
                 if (isChannel) {
                     typeCell.setTextAndValue(LocaleController.getString("ChannelType", R.string.ChannelType), type, historyCell != null && historyCell.getVisibility() == View.VISIBLE || linkedCell != null && linkedCell.getVisibility() == View.VISIBLE);
