@@ -1,4 +1,4 @@
-## Telegram Contest Nov 21
+## Telegram Contest, Nov 21
 
 For testing set Telegram api_id/api_hash in BuildVars.java.
 
