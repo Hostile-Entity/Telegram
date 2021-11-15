@@ -475,6 +475,10 @@ public class ActionBar extends FrameLayout {
         return false;
     }
 
+    public void forgetActionMode() {
+        actionMode = null;
+    }
+
     public ActionBarMenu createActionMode(boolean needTop, String tag) {
         if (actionModeIsExist(tag)) {
             return actionMode;

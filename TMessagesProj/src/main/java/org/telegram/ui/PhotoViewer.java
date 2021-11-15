@@ -10577,6 +10577,10 @@ public class PhotoViewer implements NotificationCenter.NotificationCenterDelegat
             groupedPhotosListView.fillList();
             pageBlocksAdapter.updateSlideshowCell(pageBlock);
         }
+        if (noForwards) {
+            menuItem.hideSubItem(gallery_menu_save);
+            menuItem.hideSubItem(gallery_menu_savegif);
+        }
         setCurrentCaption(newMessageObject, caption, animateCaption);
     }
 
