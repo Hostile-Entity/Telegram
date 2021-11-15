@@ -1,3 +1,13 @@
+## Telegram Android Contest, Nov 21
+
+All the changes are made in **dev_2** branch.
+
+Implemented:
+1. Restriction of forwarding messages and media from private restriscted channels/chats.
+    - Added nessecary changes to UI
+    - Configured the forward and save restriction logic
+    - Added handling of updates and user notifications
+
 ## Telegram messenger for Android
 
 [Telegram](https://telegram.org) is a messaging app with a focus on speed and security. It’s superfast, simple and free.
