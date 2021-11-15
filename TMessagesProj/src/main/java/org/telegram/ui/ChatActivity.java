@@ -14088,8 +14088,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
                     chatActivityEnterView.setDialogId(dialog_id, currentAccount);
                 }
             }
-            if (true) {
-                Log.d("CHAT", "Updating forwards");
+            if ((updateMask & MessagesController.UPDATE_MASK_CHAT_NOFORWARDS) != 0) {
                 updateVisibleRows();
             }
             if (avatarContainer != null && updateSubtitle) {

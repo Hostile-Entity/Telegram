@@ -1916,6 +1916,11 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
             protected boolean onMemberClick(TLRPC.ChatParticipant participant, boolean isLong) {
                 return ProfileActivity.this.onMemberClick(participant, isLong);
             }
+
+            @Override
+            public ViewGroup getParentFragmentView() {
+                return (ViewGroup) fragmentView;
+            }
         };
         sharedMediaLayout.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.MATCH_PARENT));
 

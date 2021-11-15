@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
@@ -29,6 +30,7 @@ import android.transition.TransitionManager;
 import android.transition.TransitionSet;
 import android.transition.TransitionValues;
 import android.transition.Visibility;
+import android.util.Log;
 import android.util.SparseArray;
 import android.util.SparseBooleanArray;
 import android.util.TypedValue;
@@ -132,6 +134,10 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
 
     public boolean isInFastScroll() {
         return mediaPages[0] != null && mediaPages[0].listView.getFastScroll() != null && mediaPages[0].listView.getFastScroll().isPressed();
+    }
+
+    public ViewGroup getParentFragmentView() {
+        return null;
     }
 
     public boolean dispatchFastScrollEvent(MotionEvent ev) {
@@ -383,6 +389,7 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
     public ImageView photoVideoOptionsItem;
     private ActionBarMenuItem forwardItem;
     private ActionBarMenuItem gotoItem;
+    private HintView forwardHint;
     private int searchItemState;
     private Drawable pinnedHeaderShadowDrawable;
     private boolean ignoreSearchCollapse;
@@ -1429,6 +1436,10 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
             actionModeLayout.addView(forwardItem, new LinearLayout.LayoutParams(AndroidUtilities.dp(54), ViewGroup.LayoutParams.MATCH_PARENT));
             actionModeViews.add(forwardItem);
             forwardItem.setOnClickListener(v -> onActionBarItemClick(forward));
+            if (isNoForwards()) {
+                forwardItem.setEnabled(false);
+                forwardItem.setAlpha(0.5f);
+            }
         }
         deleteItem = new ActionBarMenuItem(context, null, Theme.getColor(Theme.key_actionBarActionModeDefaultSelector), Theme.getColor(Theme.key_windowBackgroundWhiteGrayText2), false);
         deleteItem.setIcon(R.drawable.msg_delete);
@@ -2153,6 +2164,11 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
             return cell.getMessage().getId();
         }
         return 0;
+    }
+
+    private boolean isNoForwards() {
+        TLRPC.Chat chat = delegate == null ? null : delegate.getCurrentChat();
+        return chat != null && chat.noforwards;
     }
 
     private boolean changeTypeAnimation;
@@ -4448,6 +4464,21 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
         if (!isActionModeShowed) {
             showActionMode(true);
         }
+        if (isNoForwards()) {
+            forwardItem.setEnabled(false);
+            forwardItem.setAlpha(0.5f);
+            if (forwardHint == null) {
+                forwardHint = new HintView(forwardItem.getContext(), 4);
+                TLRPC.Chat chat = delegate == null ? null : delegate.getCurrentChat();
+                forwardHint.setText(ChatObject.isChannel(chat) ? LocaleController.getString("ChannelForwardsRestricted", R.string.ChannelForwardsRestricted) : LocaleController.getString("ChatForwardsRestricted", R.string.ChatForwardsRestricted));
+                ViewGroup p = getParentFragmentView();
+                p.addView(forwardHint, LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT, LayoutHelper.WRAP_CONTENT, Gravity.LEFT | Gravity.TOP, 10, 0, 10, 0));
+            }
+            forwardHint.showForView(forwardItem, true);
+        } else {
+            forwardItem.setEnabled(true);
+            forwardItem.setAlpha(1.0f);
+        }
         return true;
     }
 
@@ -4495,6 +4526,7 @@ public class SharedMediaLayout extends FrameLayout implements NotificationCenter
                 ((SharedPhotoVideoCell2) view).setChecked(selectedFiles[loadIndex].indexOfKey(message.getId()) >= 0, true);
             }
         } else {
+
             if (selectedMode == 0) {
                 int i = index - sharedMediaData[selectedMode].startOffset;
                 if (i >= 0 && i < sharedMediaData[selectedMode].messages.size()) {

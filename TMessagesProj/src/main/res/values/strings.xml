@@ -779,6 +779,8 @@
     <string name="EventLogToggledInvitesHistoryOff">un1 made group history hidden for new members</string>
     <string name="EventLogToggledInvitesOn">un1 enabled group invites</string>
     <string name="EventLogToggledInvitesOff">un1 disabled group invites</string>
+    <string name="EventLogToggledNoForwardsOn">un1 enabled no forwards</string>
+    <string name="EventLogToggledNoForwardsOff">un1 disabled no forwards</string>
     <string name="EventLogToggledSignaturesOn">un1 enabled signatures</string>
     <string name="EventLogToggledSignaturesOff">un1 disabled signatures</string>
     <string name="EventLogRestrictedUntil">changed permissions for %1$s\n\nDuration: %2$s</string>
